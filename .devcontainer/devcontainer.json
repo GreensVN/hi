@@ -1,0 +1,21 @@
+{
+  "name": "Free-Ultra-Desktop",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Web Desktop (noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "containerEnv": {
+    "GEOMETRY": "1366x768",
+    "DEPTH": "24"
+  },
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "16gb",
+    "storage": "32gb"
+  }
+}
